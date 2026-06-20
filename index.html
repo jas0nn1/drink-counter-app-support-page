@@ -3,33 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Drink Counter Support</title>
+  <title>Drink Counter Support & Privacy</title>
   <style>
-    body { max-width: 720px; margin: 40px auto; padding: 0 16px; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; }
-    h1 { margin-bottom: 8px; }
-    .muted { color: #6b7280; }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    :root {
+      --bg: #fffaf5;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #c44569;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap {
+      max-width: 820px;
+      margin: 36px auto 60px;
+      padding: 0 16px;
+    }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    p { margin: 0 0 10px; }
+    ul { margin: 8px 0 0 20px; padding: 0; }
+    .muted { color: var(--muted); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      margin: 14px 0;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: white;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .small { font-size: 0.92rem; }
   </style>
 </head>
 <body>
-  <h1>Drink Counter Support</h1>
-  <p class="muted">Help and support for the Drink Counter iOS app.</p>
+  <main class="wrap">
+    <span class="badge">Drink Counter</span>
+    <h1>Support & Privacy</h1>
+    <p class="muted">Help, contact info, and a plain-language summary of how data is handled in the app.</p>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>We typically respond within 2 business days.</p>
-  </div>
+    <section class="card">
+      <h2>Contact Support</h2>
+      <p>Email: <a href="mailto:jasonkor0+drinkcounter@gmail.com">jasonkor0+drinkcounter@gmail.com</a></p>
+      <p class="small muted">Typical response time: within 2 business days.</p>
+    </section>
 
-  <div class="card">
-    <h2>Common Help</h2>
-    <p>If the app seems out of sync, close and reopen it.</p>
-    <p>For data export questions, use Settings → Export.</p>
-  </div>
+    <section class="card">
+      <h2>How Drink Counter Handles Data</h2>
+      <p>Drink Counter is designed to keep your drink log on your device.</p>
+      <ul>
+        <li>Your drink entries, calendar marks, and settings are stored locally on-device.</li>
+        <li>You can export your data to CSV only when you choose to do so.</li>
+        <li>Drink Counter does not require account creation.</li>
+      </ul>
+    </section>
 
-  <div class="card">
-    <h2>Privacy</h2>
-    <p>Drink Counter stores your log data locally on your device unless you explicitly export it.</p>
-  </div>
+    <section class="card">
+      <h2>What We Do Not Intentionally Collect</h2>
+      <ul>
+        <li>No name, email, or profile is required to use the app.</li>
+        <li>No location tracking.</li>
+        <li>No ad tracking or third-party advertising SDKs.</li>
+        <li>No cloud sync of your drink logs by default.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Apple Platform Data</h2>
+      <p>Apple may process limited technical data related to App Store delivery, purchases, or diagnostics under Apple’s own policies. That processing is controlled by Apple and your device/account settings.</p>
+      <p class="small muted">For details, see Apple’s privacy information in App Store Connect and Apple’s privacy policy.</p>
+    </section>
+
+    <section class="card">
+      <h2>Manage or Delete Data</h2>
+      <ul>
+        <li>Delete the app to remove local app data from your device.</li>
+        <li>Use in-app CSV export if you want a copy of your records before deletion.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Common Help</h2>
+      <ul>
+        <li>If the app appears out of sync, fully close and reopen it.</li>
+        <li>For history sharing, use Settings → Export CSV.</li>
+      </ul>
+    </section>
+
+    <p class="muted small">Last updated: June 20, 2026</p>
+  </main>
 </body>
 </html>
